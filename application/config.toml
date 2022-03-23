@@ -1,0 +1,3 @@
+SQLALCHEMY_DATABASE_URI = 'sqlite:///messages.sqlite3'
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+SECRET_KEY = 'Generate Secret Key'

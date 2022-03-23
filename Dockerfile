@@ -14,6 +14,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the content of the local src directory to the working directory
+COPY static ./static
+COPY templates ./templates
 COPY application ./application
 COPY app.py .
 

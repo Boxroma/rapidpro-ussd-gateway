@@ -119,8 +119,9 @@ The output of the create-container-service command indicates the state of the ne
 ### 4.1b — Use the get-container-services command to monitor the state of the container as it is being created. (See third code block)
 
 Wait until the container service state changes to “ACTIVE” before continuing to the next step. Your container service should become active after a few minutes.
-
-$ aws lightsail create-container-service --service-name flask-service \ --power small --scale 1
+```commandline
+$ aws lightsail create-container-service --service-name flask-service --power small --scale 1
+```
 ```
 {
     "containerService": {
@@ -132,8 +133,9 @@ $ aws lightsail create-container-service --service-name flask-service \ --power 
 ### 4.2 —Push the application container to Lightsail with the push-container-image command. 
 
 Note: the X in ":flask-service.flask-container.X" will be a numeric value. If this is the first time you’ve pushed an image to your container service, this number will be 1. You will need this number in the next step.
-$ aws lightsail push-container-image --service-name flask-service \ 
---label flask-container --image flask-container
+```commandline
+$ aws lightsail push-container-image --service-name flask-service --label flask-container --image flask-container
+```
 
 ...
 Refer to this image as ":flask-service.flask-container.X" in deployments.
@@ -192,10 +194,8 @@ $ tree
 
 The output of the create-container-servicedeployment command indicates that the state of the container service is now “DEPLOYING”. As shown in the second code block.
 ```commandline
-$ aws lightsail create-container-service-deployment \
---service-name flask-service \
---containers file://containers.json \
---public-endpoint file://public-endpoint.json
+$ aws lightsail create-container-service-deployment --service-name flask-service --containers file://containers.json --public-endpoint file://public-endpoint.json
+
 {
     "containerServices": [{
         "containerServiceName": "flask-service",
