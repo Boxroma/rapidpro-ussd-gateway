@@ -1,0 +1,9 @@
+{
+  "id": {{id}},
+  "text": {{text}},
+  "to": {{to}},
+  "to_no_plus": {{to_no_plus}},
+  "from": {{from}},
+  "from_no_plus": {{from_no_plus}},
+  "channel": {{channel}}
+}

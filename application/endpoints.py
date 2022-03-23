@@ -196,7 +196,7 @@ def get_response():
 
 def send_to_rapidPro(tel, text):
     url = "http://176.58.99.46/c/ex/"
-    channel = "7f5c1a27-adaa-4412-aeeb-d0b703e83234"
+    channel = "ef494071-369b-4a0c-88d5-c556975ef47e"
     send_url = f"{url}{channel}/receive?from={tel}&text={text}"
     print('Request :' + send_url)
     print(tel)
